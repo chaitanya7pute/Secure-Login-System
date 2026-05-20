@@ -1,0 +1,105 @@
+<!-- Task 4: Secure Login System -->
+
+  <!-- Declares the document type. -->
+  <!-- Tells the browser this file is an HTML5 document. --> 
+  <!-- Without it, browsers may render in “quirks mode” (old compatibility mode). -->
+<!DOCTYPE html>
+
+  <!-- <html> → Root element of the page. Everything goes inside it. -->
+  <!-- lang="en" → Declares the language as English. Helps with accessibility and SEO. -->
+<html lang="en">
+
+  <!-- Contains metadata (information about the page, not visible content). -->
+  <!-- Things like title, stylesheets, scripts go here. -->
+<head>
+
+    <!-- Sets the character encoding to UTF‑8. -->
+    <!-- Ensures special characters (like ✅, emojis, accented letters) display correctly. -->
+  <meta charset="UTF-8">
+
+    <!-- Defines the title of the page. -->
+    <!-- Appears in the browser tab as “Login”. -->
+  <title>Login</title>
+
+    <!-- Links an external CSS file. -->
+    <!-- rel="stylesheet" → Tells browser it’s a stylesheet. -->
+    <!-- href="style.css" → Path to your CSS file. -->
+    <!-- This is how your login page gets styled. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  <!-- Contains all the visible content of the page. -->
+  <!-- Whatever you put here shows up in the browser window. -->
+<body>
+
+    <!-- <div> → A generic container element. -->
+    <!-- class="login-card" → Applies CSS rules defined for .login-card in style.css -->
+    <!-- Used to group your login form content. -->
+  <div class="login-card">
+    <h2>Login</h2>
+
+        <!-- <form> → Creates a form for user input. -->
+        <!-- action="/login" → When submitted, sends data to /login route in your server. -->
+        <!-- method="POST" → Sends data securely in the request body (not visible in URL). -->
+      <form action="/login" method="POST">
+
+        <!-- <div class="input-group"> → Groups each input field for styling. -->
+      <div class="input-group">
+
+          <!-- <input> → Creates an input field. -->
+          <!-- type="text" → Specifies it’s a text input. -->
+          <!-- name="username" → The key sent to the server for this input’s value. -->
+          <!-- placeholder="Username" → Shows “Username” inside the field when it’s empty. -->
+          <!-- required → Makes this field mandatory. Form won’t submit if it’s empty. -->
+        <input type="text" name="username" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+          <!-- type="password" → Input will hide characters (for passwords). -->
+          <!-- name="password" → The key sent to the server for this input’s value. -->
+          <!-- placeholder="Password" → Shows “Password” inside the field when it’s empty. -->
+          <!-- required → Makes this field mandatory. Form won’t submit if it’s empty. -->
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+        <!-- <div class="options"> → Groups the “Remember me” checkbox and “Forgot Password?” link for styling. -->
+      <div class="options">
+        
+          <!-- <label> → Labels the checkbox for better accessibility. -->
+        <label>
+
+            <!-- <input type="checkbox"> → Creates a checkbox input. -->
+            <!-- name="remember" → The key sent to the server if this box is checked. -->
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+
+          <!-- <a> → Anchor tag (hyperlink). -->
+          <!-- href="#" → Placeholder link. You can replace it with your actual password reset page.  -->
+        <a href="#">Forgot Password?</a>
+      </div>
+        
+        <!-- <button type="submit"> → Creates a submit button. -->
+        <!-- class="login-btn" → Applies CSS styling for .login-btn. -->
+        <!-- When clicked, the form data is sent to the server as defined in the <form> tag. -->
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+      <!-- <div class="register-link"> → Groups the registration prompt for styling. -->
+    <div class="register-link">
+
+         <!-- Text prompting users who don’t have an account. -->
+         <!-- <a> → Anchor tag (hyperlink). -->
+         <!-- href="register.html" → When clicked, takes user to register.html page. -->
+         <!-- Text “Register” is clickable. --> 
+      Don’t have an account? <a href="register.html">Register</a>
+    
+      <!-- Closes the <div> container for the registration link. -->
+    </div>
+  
+    <!-- Closes the <div> container for the login card. -->
+  </div>
+
+  <!-- Closes the body section. -->
+</body>
+
+  <!--Closes the entire HTML document. -->
+</html>

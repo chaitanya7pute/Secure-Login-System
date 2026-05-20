@@ -1,0 +1,101 @@
+<!-- Task 4: Secure Login System -->
+
+  <!-- Declares the document type. -->
+  <!-- Tells the browser this file is an HTML5 document. --> 
+  <!-- Without it, browsers may render in “quirks mode” (old compatibility mode). -->
+<!DOCTYPE html>
+
+  <!-- <html> → Root element of the page. Everything goes inside it. -->
+  <!-- lang="en" → Declares the language as English. Helps with accessibility and SEO. -->
+<html lang="en">
+
+  <!-- Contains metadata (information about the page, not visible content). -->
+  <!-- Things like title, stylesheets, scripts go here. -->
+<head>
+  
+    <!-- Sets the character encoding to UTF‑8. -->
+    <!-- Ensures special characters (like ✅, emojis, accented letters) display correctly. -->
+  <meta charset="UTF-8">
+  
+    <!-- Defines the title of the page. -->
+    <!-- Appears in the browser tab as “Register”. -->
+  <title>Register</title>
+  
+    <!-- Links an external CSS file. -->
+    <!-- rel="stylesheet" → Tells browser it’s a stylesheet. -->
+    <!-- href="style.css" → Path to your CSS file. -->
+    <!-- This is how your register page gets styled. -->
+  <link rel="stylesheet" href="style.css">
+
+ <!-- Closes the head section. -->
+</head>
+
+  <!-- Contains all the visible content of the page. -->
+  <!-- Whatever you put here shows up in the browser window. -->
+<body>
+  
+      <!-- <div> → A generic container element. -->
+      <!-- class="login-card" → Applies CSS rules defined for .login-card in style.css -->
+      <!-- Used to group your registration form content. -->
+  <div class="login-card">
+    <h2>Register</h2>
+    
+        <!-- <form> → Creates a form for user input. -->
+        <!-- action="/register" → When submitted, sends data to /register route in your server. -->
+        <!-- method="POST" → Sends data securely in the request body (not visible in URL). -->
+    <form action="/register" method="POST">
+      
+        <!-- <div class="input-group"> → Groups each input field for styling. -->
+      <div class="input-group">
+        
+          <!-- <input> → Creates an input field. -->
+          <!-- type="text" → Specifies it’s a text input. -->
+          <!-- name="username" → The key sent to the server for this input’s value. -->
+          <!-- placeholder="Username" → Shows “Username” inside the field when it’s empty. -->
+          <!-- required → Makes this field mandatory. Form won’t submit if it’s empty. -->
+        <input type="text" name="username" placeholder="Username" required>
+      
+       
+      </div>
+      
+        <!-- <div class="input-group"> → Groups each input field for styling. -->
+      <div class="input-group">
+        
+          <!-- <input> → Creates an input field. -->
+          <!-- type="password" → Input will hide characters (for passwords). -->
+          <!-- name="password" → The key sent to the server for this input’s value. -->
+          <!-- placeholder="Password" → Shows “Password” inside the field when it’s empty. -->
+          <!-- required → Makes this field mandatory. Form won’t submit if it’s empty. -->
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+        <!-- <button> → Creates a clickable button. -->
+        <!-- type="submit" → When clicked, submits the form data to the server. -->
+        <!-- class="login-btn" → Applies CSS styling for .login-btn. -->
+        <!-- Text “Register” is shown on the button. -->
+      <button type="submit" class="login-btn">Register</button>
+   
+      <!-- Closes the form. -->
+    </form>
+
+      <!-- <div class="register-link"> → A container for the login link. -->
+      <!-- Provides a link for users who already have an account to go to the login page. -->
+    <div class="register-link">
+      
+        <!-- Text “Already have an account?” is shown, followed by a clickable “Login” link. -->
+        <!-- <a> → Anchor tag (hyperlink). -->
+        <!-- href="login.html" → When clicked, navigates to login.html page. -->
+        <!-- This allows users to easily switch to the login page if they already have an account. -->
+      Already have an account? <a href="login.html">Login</a>
+    
+      <!-- Closes the register-link div. -->
+    </div>
+  
+    <!-- Closes the login-card div. -->
+  </div>
+ 
+  <!-- Closes the body section. -->
+</body>
+
+  <!-- Closes the entire HTML document. -->
+</html>

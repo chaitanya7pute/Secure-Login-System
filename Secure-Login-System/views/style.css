@@ -1,0 +1,217 @@
+/* Task 4: Secure Login System */
+
+/* Global Styles & Background */
+body {
+
+        /* Sets a background image for the entire page. */
+    background-image: url('abstract_art.jpg'); 
+    
+        /* Ensures the background image covers the entire viewport without distortion. */
+    background-size: cover;
+    
+        /* Centers the background image both horizontally and vertically. */
+    background-position: center;
+    
+        /* Prevents the background image from repeating. */
+    min-height: 100vh;
+    
+        /* Resets default margin and sets a clean font for the page. */
+    margin: 0;
+    
+        /* Sets the font for the entire page to Arial, with a fallback to sans-serif. */
+    font-family: Arial, sans-serif;
+    
+        /* Uses Flexbox to center the login card both horizontally and vertically. */
+    display: flex; 
+    
+        /* Centers the content horizontally and aligns it to the top of the page. */
+    justify-content: center;
+    
+        /* Aligns items to the top of the page, creating space for the login card. */
+    align-items: flex-start;
+    
+        /* Adds padding to the top of the page to create space for the login card. */
+    padding-top: 80px;
+    
+        /* Sets the text color to white for better contrast against the background. */
+    color: white;
+}
+
+/* Glassmorphism Card */
+    /* Styles for the login card, creating a glassmorphism effect. */
+.login-card {
+    width: 280px;
+    
+        /* Adds padding inside the card for spacing. */
+    padding: 25px;
+    
+        /* Rounds the corners of the card for a softer look. */
+    border-radius: 15px;
+
+        /* Creates a semi-transparent background with a blur effect for the glassmorphism style. */
+    background-color: rgba(255, 255, 255, 0.15); 
+
+        /* Applies a blur effect to the background behind the card, enhancing the glassmorphism look. */
+    backdrop-filter: blur(10px); 
+
+        /* Adds a subtle border around the card to enhance the glassmorphism effect. */
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+
+        /* Adds a shadow to the card for depth and emphasis. */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+    /* Styles for the heading inside the login card. */
+.login-card h2 {
+
+        /* Adds space below the heading for separation from the input fields. */
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Input Fields */
+    /* Styles for the input groups, adding space between them. */
+.input-group {
+        /* Adds space below each input group for separation. */
+    margin-bottom: 20px;
+}
+
+    /* Styles for the input fields inside the login card. */
+.login-card input {
+    
+        /* Makes the input fields take up the full width of the card. */
+    width: 100%;
+
+        /* Adds padding inside the input fields for better usability. */
+    padding: 8px 0;
+
+        /* Creates a transparent background for the input fields, allowing the glassmorphism effect to show through. */
+    background: transparent;
+
+        /* Removes the default border and adds a custom bottom border for a sleek look. */
+    border: none;
+
+        /* Adds a bottom border to the input fields for visual separation and style. */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    color: white;
+    font-size: 14px;
+
+        /* Removes the default outline when the input fields are focused for a cleaner look. */
+    outline: none;
+}
+
+/* Options & Links */
+    /* Styles for the options section, which includes links for forgot password and registration. */
+.options {
+    
+        /* Uses Flexbox to arrange the options horizontally and space them apart. */
+    display: flex;
+
+        /* Justifies the content to have space between the items, pushing them to opposite ends. */
+    justify-content: space-between;
+    font-size: 14px;
+
+        /* Adds space below the options for separation from the login button. */
+    margin-bottom: 30px;
+}
+
+    /* Styles for the links in the options and registration sections. */
+    /* Sets the color of the links to a light blue and removes the default underline for a cleaner look. */
+    /* This styling makes the links visually appealing and consistent with the overall design. */
+.options a, .register-link a {
+    
+        /* Sets the color of the links to a light blue for better visibility against the background. */
+        /* Removes the default underline from the links for a cleaner and more modern appearance. */
+        /* This styling makes the links visually appealing and consistent with the overall design of the login page. */
+    color: #4db8ff;
+
+        /* Removes the default underline from the links for a cleaner and more modern appearance. */
+    text-decoration: none;
+}
+
+    /* Styles for the registration link section, providing space and styling for users who want to register. */
+.register-link {
+
+        /* Adds space above the registration link for separation from the login button. */
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* Buttons */
+    /* Styles for the login button, making it visually appealing and consistent with the overall design. */
+.login-btn {
+    width: 100%;
+
+        /* Adds padding inside the button for better usability and a more substantial appearance. */
+    padding: 10px;
+
+        /* Removes the default border and rounds the corners of the button for a modern look. */
+    border: none;
+    
+        /* Rounds the corners of the button for a softer and more modern appearance. */
+    border-radius: 25px;
+    font-size: 16px;
+
+        /* Makes the button text bold for better visibility and emphasis. */
+    font-weight: bold;
+
+        /* Changes the cursor to a pointer when hovering over the button, indicating it's clickable. */
+    cursor: pointer;
+
+        /* Sets the background color of the button to a bright blue and the text color to white for good contrast. */
+    background: #0088cc; 
+    color: white;
+
+        /* Adds a transition effect for the background color when hovering over the button, making it visually appealing. */
+    transition: background 0.3s;
+}
+
+    /* Adds a hover effect to the login button, changing the background color to a darker blue for better interactivity and visual feedback when the user hovers over the button. */
+.login-btn:hover {
+
+        /* Changes the background color of the button to a darker blue when hovered, providing visual feedback and enhancing interactivity. */
+    background: #005f99;
+}
+
+    /* Styles for the success message page, centering the message and providing a visually appealing design. */
+.success-message {
+
+    /* Uses Flexbox to center the success message both horizontally and vertically on the page. */
+  display: flex;
+  justify-content: center;
+
+    /* Aligns items to the center vertically, ensuring the success message is perfectly centered on the page. */
+  align-items: center;
+
+    /* Sets the height of the success message container to fill the entire viewport, ensuring it is centered regardless of screen size. */
+  height: 100vh;
+  font-size: 48px;
+
+    /* Sets the text color to lime green for a bright and positive visual effect, indicating success. */
+  color: limegreen;
+
+    /* Makes the success message text bold for better visibility and emphasis. */
+  font-weight: bold;
+  text-align: center;
+
+    /* Adds a subtle shadow to the success message text for better readability and a more polished look. */
+  flex-direction: column;
+}
+
+    /* Styles for the link in the success message, providing a way for users to navigate back to the login page after successful registration. */
+.success-message a {
+
+    /* Sets the color of the link to a light blue for better visibility against the background. */
+    /* Removes the default underline from the link for a cleaner and more modern appearance. */
+    /* This styling makes the link visually appealing and consistent with the overall design of the success message page. */
+  margin-top: 20px;
+  font-size: 20px;
+
+    /* Sets the color of the link to a light blue for better visibility against the background. */
+    /* Removes the default underline from the link for a cleaner and more modern appearance. */
+  color: #4db8ff;
+
+    /* Removes the default underline from the link for a cleaner and more modern appearance. */
+  text-decoration: none;
+}

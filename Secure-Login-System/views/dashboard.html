@@ -1,0 +1,55 @@
+<!-- Task 4: Secure Login System -->
+
+  <!-- Declares the document type. -->
+  <!-- Tells the browser this file is an HTML5 document. --> 
+  <!-- Without it, browsers may render in “quirks mode” (old compatibility mode). --> 
+<!DOCTYPE html>
+
+  <!-- <html> → Root element of the page. Everything goes inside it. -->
+  <!-- lang="en" → Declares the language as English. Helps with accessibility and SEO. -->
+<html lang="en">
+
+  <!-- Contains metadata (information about the page, not visible content). -->
+  <!-- Things like title, stylesheets, scripts go here. -->
+<head>
+
+    <!-- Sets the character encoding to UTF‑8. -->
+    <!-- Ensures special characters (like ✅, emojis, accented letters) display correctly. -->
+  <meta charset="UTF-8">
+
+    <!-- Defines the title of the page. -->
+    <!-- Appears in the browser tab as “Dashboard”. -->
+  <title>Dashboard</title>
+
+    <!-- Links an external CSS file. -->
+    <!-- rel="stylesheet" → Tells browser it’s a stylesheet. -->
+    <!-- href="style.css" → Path to your CSS file. -->
+    <!-- This is how your dashboard gets styled. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  <!-- Contains all the visible content of the page. -->
+  <!-- Whatever you put here shows up in the browser window. -->
+<body>
+  
+    <!-- <div> → A generic container element. -->
+    <!-- class="login-card" → Applies CSS rules defined for .login-card in style.css. -->
+    <!-- Used to group your dashboard content. --> 
+  <div class="login-card">
+    <h2>Welcome to Secure Dashboard</h2>
+    <p>You are successfully logged in!</p>
+    
+      <!-- <a> → Anchor tag (hyperlink). -->
+      <!-- href="/logout" → When clicked, sends request to /logout route in your server. -->
+      <!-- class="login-btn" → Applies CSS styling for .login-btn. -->  
+      <!--Text “Logout” is clickable.-->
+    <a href="/logout" class="login-btn">Logout</a>
+  
+    <!-- Closes the <div> container. -->
+  </div>
+
+  <!-- Closes the body section. --> 
+</body>
+
+  <!--Closes the entire HTML document. -->
+</html>
